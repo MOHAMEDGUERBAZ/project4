@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2b2b2b;
+    color: white;
+}
+
+#title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold color */
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#player-turn {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#restart-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#restart-btn:hover {
+    background-color: #45a049;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+#message {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Animation for winner message */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.winner-message {
+    animation: scaleUp 0.5s ease-out;
+}
+
+/* Add more styling for the gaming atmosphere as needed */
